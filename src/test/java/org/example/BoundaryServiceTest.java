@@ -20,7 +20,7 @@ class BoundaryServiceTest {
     @MethodSource("arrays")
     public void findMinElementInArray(int[] arr) {
         OptionalInt min = OptionalInt.of(boundaryService.findMin(arr));
-        OptionalInt exp = stream(arr).max();
+        OptionalInt exp = stream(arr).min();
         assertEquals(min, exp);
     }
 
